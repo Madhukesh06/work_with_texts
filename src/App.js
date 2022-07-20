@@ -4,7 +4,7 @@ import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 
-import { Route, Routes } from "react-router-dom";
+// import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -44,29 +44,30 @@ function App() {
         toggleMode={toggleMode}
       />
       <Alert alert={alert} />
-      <Routes>
-        <Route
-          path="about"
+      {/* <div className="container"> */}
+      <TextForm
+        heading="Enter text below to Change to upperCase"
+        mode={mode}
+        showAlert={showAlert}
+      />
+      {/* </div> */}
+      {/* <Routes> */}
+      {/* <Route */}
+      {/* path="about"
           element={
             <div className="container">
               {" "}
               <About mode={mode} />
             </div>
           }
-        />
-        <Route
+        /> */}
+      {/* <Route
           path="textform"
-          element={
-            <div className="container">
-              <TextForm
-                heading="Enter text below to Change to upperCase"
-                mode={mode}
-                showAlert={showAlert}
-              />
-            </div>
-          }
-        />
-      </Routes>
+          element={ */}
+
+      {/* {/* }
+        // /> */}
+      {/* </Routes> */}
     </>
   );
 }
